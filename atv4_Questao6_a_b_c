@@ -1,0 +1,69 @@
+programa {
+    
+    inclua biblioteca Matematica--> mat
+    
+	funcao inicio() {
+		
+		//olá prof, estava analisando o gramado de um estádio, então me surgiu a 
+		//dúvida seh o gramado de um estádio era somente a parte retangular(área de
+		//jogo) ouh  toda a parte da grama, por isso fiz um código um pouco maior do que o esperado, utilizando 
+		//o comando seh. (coloquei um h na frente de algumas palavras parah não dar erro)
+		
+		limpa()
+		real comp // -----> largura
+		real larg //------> comprimento
+		cadeia retang_ou_elip 
+		
+		escreva("Olá o gramado que desejas saber os dados é um retângulo ou elipse?(digite a resposta em letras minúsculas) \n")
+		leia(retang_ou_elip)
+		limpa()
+		
+		 se(retang_ou_elip == "retângulo"){
+		    
+		    escreva("Me informe o comprimento do gramado em metros(utilie ponto(.) ao invés de virgula(,) quando for dividir metros de cm: ")
+		    leia(comp)
+		    limpa()
+		    
+		    escreva("Me informe a largura do gramado em metros(utilie ponto(.) ao invés de virgula(,) quando for dividir metros de cm: ")
+		    leia(larg)
+		    limpa()
+		    
+		    real area = comp*larg
+		    area = Matematica.arredondar(comp*larg,1) // -------> comando que diz a área do gramado
+		    
+		    real area_dobrada 
+		    area_dobrada = Matematica.arredondar(comp*larg*2,1) // --------> comando que diz a area em dobro do gramado
+		    
+		    
+		    real area_cm = comp*larg*2*100 
+		    area_cm = Matematica.arredondar(comp*larg*2*100,1) // --------> comando que diz o dobro do gramado em cm
+		    
+		    escreva("A área do gramado é: ", area, " metros quadrados.\n", "O dobro da área do gramado é: ", area_dobrada, " metros quadrados. \n", "O dobro da área em centímetros do gramado é: ", area_cm, " cm quadrados.")
+		    
+		}senao se(retang_ou_elip == "elipse"){
+		    
+		   escreva("Me informe o comprimento do gramado em metros (utilie ponto(.) ao invés de virgula(,) quando for dividir metros de cm: ")
+		    leia(comp)
+		    limpa()
+		    
+		    escreva("Me informe a largura do gramado em metros(utilie ponto(.) ao invés de virgula(,) quando for dividir metros de cm: ")
+		    leia(larg)
+		    limpa()
+		    
+		    real raio1 = comp/2
+		    real raio2 = larg/2
+		    
+		    real area_mt
+		    area_mt = Matematica.arredondar(Matematica.PI*raio1*raio2,1) // -------> comando que calcula e arredonda a área do gramado
+		   
+		    real area_mt2
+		    area_mt2 = Matematica.arredondar(Matematica.PI*raio1*raio2*2,1) //------> comando que calcula e arredonda o dobro da área do gramado
+		    
+		    escreva("A área do gramado é: ", area_mt, " metros quadrados. \n", "O dobro da área do gramado é: ", area_mt2, " metros quadrados. \n", "O dobro da área em centímetros do gramado é: ", area_mt2*100 , " cm quadrados. \n \n")
+	
+	
+		}
+		
+	    
+	}	    
+}        
